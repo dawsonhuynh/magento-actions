@@ -26,7 +26,8 @@ mkdir -p deployer/scripts/
 cp -R /opt/config/pipelines/scripts/staging deployer/scripts/staging
 
 echo 'creating bucket dir'
-ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null  $DEV "mkdir -p $HOST_DEPLOY_PATH_BUCKET"
+#ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null  $DEV "mkdir -p $HOST_DEPLOY_PATH_BUCKET"
+ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null  $DEV "echo 'test ssh'"
 
 ARCHIVES="deployer/scripts/staging"
 
